@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4731jnjuatsy"]
+
+[ext_resource type="Script" uid="uid://bvotfwvm0s0yf" path="res://scenes/game_over_menu.gd" id="1_6ebp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6skn4"]
+bg_color = Color(0.21905375, 0.2955594, 0.38388255, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 2
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="SystemFont" id="SystemFont_6ebp1"]
+font_italic = true
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwb3k"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.12939325, 0.3174551, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 10
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ccgoi"]
+bg_color = Color(0.03594776, 0.06358858, 0.051827706, 1)
+border_blend = true
+shadow_color = Color(0.4024933, 0.27071992, 0.46963918, 0.6)
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_6ebp1")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -125.0
+offset_right = 200.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6skn4")
+
+[node name="ResultLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.5
+offset_top = -86.0
+offset_right = 133.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_6ebp1")
+theme_override_font_sizes/font_size = 50
+text = "Game Over !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 370.0
+offset_top = 497.0
+offset_right = 630.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9989533, 0.9434312, 0.8390652, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_cwb3k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ccgoi")
+text = "Play Again"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
