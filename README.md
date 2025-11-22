@@ -11,7 +11,11 @@ A classic Snake game built with Godot Engine. This is my first game development 
 This is a modern take on the timeless Snake game where you control a growing snake, eat apples, and try not to crash into yourself or the walls. Built from scratch (coding with russ yotube channel), this project helped me understand core concepts like grid-based movement, collision detection, and game state management.
 
 ---
+## Platform
 
+This game is hosted and available to play on **[itch.io](https://itch.io)** - a platform for indie game developers to share their creations.
+
+---
 ## Features
 
 - **Classic Gameplay** – Traditional snake mechanics with smooth grid-based movement  
@@ -26,22 +30,19 @@ This is a modern take on the timeless Snake game where you control a growing sna
 
 - **Godot Engine** v4.5.1.stable.official  
 - **GDScript** – Godot's built-in scripting language  
-- **2D Graphics** – Custom sprites and backgrounds  
+- **2D Graphics** – Custom sprites and backgrounds
+- **Hosted on** - itch.io
 
 ---
 
 ## Play the Game
 
-Click here to play the game directly in your browser  
-*i'll try to add the link soon*
+[Click here to play the game directly in your browser](https://yacinetalahari.itch.io/yacinetalahariitchiosnake-game)
+
+**Note: This game requires a keyboard and is best played on PC/laptop.**
 
 ---
 
-## How to Play
-
-Coming soon! I'm still working on perfecting the gameplay experience with my hommies before documenting the controls and strategies.
-
----
 
 ## Project Structure
 
